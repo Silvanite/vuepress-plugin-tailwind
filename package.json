@@ -1,6 +1,6 @@
 {
     "name": "@silvanite/vuepress-plugin-tailwind",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Tailwind CSS plugin for VuePress",
     "repository": {
         "type": "git",
