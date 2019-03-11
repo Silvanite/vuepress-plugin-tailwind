@@ -14,12 +14,8 @@ const plugin = (options = {}, context) => {
      */
     if (isProd) plugins.push(require("@fullhuman/postcss-purgecss")({
         content: [
-            `${cwd}/.vuepress/**/*.vue`,
-            `${cwd}/.vuepress/**/*.md`,
-            `${cwd}/.vuepress/**/*.js`,
-            `${cwd}/.vuepress/**/*.html`,
-            `${cwd}/.vuepress/**/*.styl`,
-            "!(node_modules)/**/*.*",
+            `${cwd}/.vuepress/theme/**/*.*`,
+            `${cwd}/!(node_modules)/**/*.md`,
         ],
 
         extractors: [
