@@ -62,7 +62,7 @@ const plugin = (options = {}, context) => {
     /**
      * Merge in the site's purgecss config
      */
-    siteConfig.postcss = Object.assign(siteConfig.postcss || {}, { plugins })
+    siteConfig.postcss = merge(siteConfig.postcss || {}, { plugins })
 
     return {
         name: '@silvanite/vuepress-plugin-tailwind',
