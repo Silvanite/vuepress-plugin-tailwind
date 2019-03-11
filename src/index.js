@@ -1,8 +1,15 @@
 import path from 'path'
+import { merge } from 'lodash'
+
+const defaultOptions = {
+    purgecss: {
+        enabled: true,
+    },
+}
 
 const plugin = (options = {}, context) => {
     const { themeConfig, siteConfig, cwd, isProd } = context
-    const { config } = options
+    const { config, purgecss } = merge(defaultOptions, options)
 
     const plugins = [
         require("tailwindcss")(config || path.join(__dirname, "tailwind.config.js")),
@@ -12,7 +19,7 @@ const plugin = (options = {}, context) => {
     /**
      * Only run purge css in production.
      */
-    if (isProd) plugins.push(require("@fullhuman/postcss-purgecss")({
+    if (isProd && purgecss.enabled) plugins.push(require("@fullhuman/postcss-purgecss")({
         content: [
             `${cwd}/.vuepress/theme/**/*.*`,
             `${cwd}/!(node_modules)/**/*.md`,
