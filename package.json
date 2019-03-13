@@ -26,6 +26,8 @@
     "author": "Marco Mark <m2de@outlook.com>",
     "license": "MIT",
     "dependencies": {
+        "@fullhuman/postcss-purgecss": "^1.1.0",
+        "lodash": "^4.17.11",
         "tailwindcss": "^0.7.4"
     },
     "devDependencies": {

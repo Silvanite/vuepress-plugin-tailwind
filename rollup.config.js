@@ -8,7 +8,8 @@ export default [
             format: 'cjs',
         },
         external: [
-            "path"
+            "path",
+            "lodash",
         ],
         plugins: [
             RollupPluginBabel(),

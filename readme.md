@@ -19,7 +19,7 @@ module.exports = {
 
 ## Configuration options
 
-You can overwrite the default configuration if required
+You can overwrite the default Tailwind CSS configuration if required, otherwise the default config will be loaded.
 
 ```js
 module.exports = {
@@ -27,6 +27,19 @@ module.exports = {
     "plugins": [
         ["@silvanite/tailwind", {
             config: "./tailwind.js"
+        }]
+    ]
+}
+```
+
+By default PurgeCSS will be applied when running vuepress build (production). You can optionally disable this if you do not want to use PurgeCSS.
+
+```js
+module.exports = {
+    ...
+    "plugins": [
+        ["@silvanite/tailwind", {
+            purgecss: { enabled: false }
         }]
     ]
 }
