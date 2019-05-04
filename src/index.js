@@ -12,7 +12,7 @@ const plugin = (options = {}, context) => {
     const { config, purgecss } = merge(defaultOptions, options)
 
     const plugins = [
-        require("tailwindcss")(config || path.join(__dirname, "tailwind.config.js")),
+        require("tailwindcss")(config),
         require("autoprefixer"),
     ]
 
