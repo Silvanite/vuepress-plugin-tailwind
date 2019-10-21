@@ -26,14 +26,14 @@
     "author": "Marco Mark <m2de@outlook.com>",
     "license": "MIT",
     "dependencies": {
-        "@fullhuman/postcss-purgecss": "^1.1.0",
-        "lodash": "^4.17.11",
-        "tailwindcss": "^0.7.4"
+        "@fullhuman/postcss-purgecss": "^1.3.0",
+        "lodash": "^4.17.15",
+        "tailwindcss": "^1.1.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.3.3",
-        "@babel/preset-env": "7.3.1",
-        "rollup": "^1.1.2",
-        "rollup-plugin-babel": "^4.3.2"
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "7.6.3",
+        "rollup": "^1.25.1",
+        "rollup-plugin-babel": "^4.3.3"
     }
 }

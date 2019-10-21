@@ -1,5 +1,15 @@
 # VuePress Plugin to add Tailwind CSS
 
+## Overview
+
+This plugin will install Tailwind CSS ^1.1.2 ready for you to import into your VuePress theme or project. You will need to follow the [Tailwind CSS installation](https://tailwindcss.com/docs/installation/) instructions and add Tailwind to your CSS. E.g. add the tailwind directives to your styl or css files.
+
+```styl
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
 ## Installation
 
 ```sh
@@ -19,7 +29,7 @@ module.exports = {
 
 ## Configuration options
 
-You can overwrite the default Tailwind CSS configuration if required, otherwise the default config will be loaded.
+Please follow the [Tailwind CSS configuration](https://tailwindcss.com/docs/configuration/) instructions. If you are using the default filename, you do not need to specify it here. If you would like to load a custom configuration file with a different filename to the default `tailwind.config.js` you can specify this in the plugin options.
 
 ```js
 module.exports = {
@@ -32,7 +42,7 @@ module.exports = {
 }
 ```
 
-By default PurgeCSS will be applied when running vuepress build (production). You can optionally disable this if you do not want to use PurgeCSS.
+By default PurgeCSS will be applied when running VuePress build (production). You can optionally disable this if you do not want to use PurgeCSS.
 
 ```js
 module.exports = {

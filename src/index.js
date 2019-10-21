@@ -1,4 +1,3 @@
-import path from 'path'
 import { merge } from 'lodash'
 
 const defaultOptions = {
@@ -52,7 +51,7 @@ const plugin = (options = {}, context) => {
         ],
 
         /**
-         * Ensure default resets and normalised classes ar enot removed by PurgeCSS
+         * Ensure default resets and normalised classes are not removed by PurgeCSS
          */
         whitelistPatterns: [
             /^(h\d|p$|ul|li$|div|ol|table|td$|th$|thead|tbody|main|input|button|form|md-|hljs)/
