@@ -8,20 +8,8 @@ export default [
             format: 'cjs',
         },
         external: [
-            "path",
             "lodash",
         ],
-        plugins: [
-            RollupPluginBabel(),
-        ],
-    },
-    {
-        input: 'src/tailwind.config.js',
-        output: {
-            file: 'dist/tailwind.config.js',
-            format: 'cjs',
-        },
-        external: [],
         plugins: [
             RollupPluginBabel(),
         ],
