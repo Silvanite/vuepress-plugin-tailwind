@@ -3,6 +3,9 @@ import { merge } from 'lodash'
 const defaultOptions = {
     purgecss: {
         enabled: true,
+
+        /* Valid PurgeCss config options */
+        purgecssOptions: {}
     },
 }
 
@@ -46,7 +49,10 @@ const plugin = (options = {}, context) => {
                     "vue",
                     "md",
                     "styl"
-                ]
+                ],
+
+                /* spread options */
+                ...purgecss.purgecssOptions,
             }
         ],
 
